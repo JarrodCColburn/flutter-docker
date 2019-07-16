@@ -7,6 +7,7 @@ RUN curl -o  /tmp/flutter.tar.xz https://storage.googleapis.com/flutter_infra/re
     && tar -xvf /tmp/flutter.tar.xz -C /usr/local \
     && /usr/local/flutter/bin/flutter doctor \ 
     && rm -r /tmp/*
+RUN yes | flutter doctor --android-licenses
 
 ENV FLUTTER_ROOT=/usr/local/flutter
 ENV PATH=${PATH}:${FLUTTER_ROOT}/bin
