@@ -6,7 +6,7 @@ RUN apt-get update \
 RUN curl -o  /tmp/flutter.tar.xz https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v${FLUTTER_VERSION}.tar.xz \
     && tar -xvf /tmp/flutter.tar.xz -C /usr/local \
     && /usr/local/flutter/bin/flutter doctor \ 
-    && rm /tmp/*
+    && rm -r /tmp/*
 
 ENV FLUTTER_ROOT=/usr/local/flutter
 ENV PATH=${PATH}:${FLUTTER_ROOT}/bin
