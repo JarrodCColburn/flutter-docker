@@ -10,5 +10,3 @@ RUN curl -o  /tmp/flutter.tar.xz https://storage.googleapis.com/flutter_infra/re
 ENV FLUTTER_ROOT=/usr/local/flutter \
     PATH=${PATH}:${FLUTTER_ROOT}/bin:${FLUTTER_ROOT}/bin/cache/dart-sdk/bin \
     PUB_CACHE=~/.pub-cache
-RUN mkdir -p ${PUB_CACHE} \
-    && yes | flutter doctor --android-licenses
